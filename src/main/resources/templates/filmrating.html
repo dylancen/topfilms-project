@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td><b>Рейтинг</b></td>
+            <td><b>Название фильма</b></td>
+            <td><b>Год выпуска</b></td>
+            <td><b>Оценка</b></td>
+            <td><b>Количество голосов</b></td>
+        </tr>
+        <tr th:each="rating:${ratings}">
+            <td th:text="${rating.position}"></td>
+            <td th:text="${rating.film.name}"></td>
+            <td th:text="${rating.film.year}"></td>
+            <td th:text="${#numbers.formatDecimal(rating.rating, 0, 'COMMA', 1, 'POINT')}"></td>
+            <td th:text="${rating.votecount}"></td>
+        </tr>
+    </table>
+</body>
+</html>

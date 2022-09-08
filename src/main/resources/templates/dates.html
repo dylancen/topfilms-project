@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Select Dates</title>
+</head>
+<body>
+    <h3>Select date of rating list</h3>
+    <form th:action="@{/ratings}" method="post">
+        <select th:name="date">
+            <option th:each="date : ${dates}" th:value="${date}" th:text="${date}"></option>
+        </select>
+        <input type="submit">
+    </form>
+</body>
+</html>
