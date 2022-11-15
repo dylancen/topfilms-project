@@ -1,17 +1,8 @@
-Задание:
+This is a console application that collects data from the Kinopoisk rating (http://www.kinopoisk.ru/top/), which saves the opinion, rating, original name, year and number of people who voted. It collects data once a day using a cron scheduler bean and saves the data to the database. The user can select a date during which the data was collected and see which films were in the rating on that particular day.
 
-Необходимо написать консольное приложение, собирающее данные с рейтинга Кинопоиска (http://www.kinopoisk.ru/top/), и сохраняющего позицию, рейтинг, оригинальное название, год и кол-во проголосовавших людей. Также нужно добавить соответствующие поля в БД для выборки рейтинга на определенную дату. Запускаться будет через cron.
-Cоздать простой сервлет, содержащий страницу с топ-10 фильмов на указанную дату. На ней должно присутствовать поле, где пользователь может указать дату выборки. При выгрузке данных из СУБД должен быть использован кэширующий слой, чтобы избежать запросов к базе, каждый раз, когда рейтинг должен быть показан.
-Используемые средства:
+Tools used:
 -	Spring *
 -	Hibernate
--	любая embedded DB
--	любой embedded контейнер сервлетов
+-	PostgresDB
 -	maven
 -	github
-
-
-Критерии оценки:
--	чистый, читаемый, структурируемый код
--	объектно-ориентированный дизайн
--	схема базы данных
